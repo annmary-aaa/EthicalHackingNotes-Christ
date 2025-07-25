@@ -207,6 +207,8 @@ This timeline is for **educational and ethical use only**. Unauthorized access t
 - `JohnTheRipper` – Password cracking
 - `netcat` – Reverse shell and port communication
 - `Burp Suite` – Web app analysis
+-Vn-A-sV-O-oN--script-vv-p--sS-sT
+
 
 
 
