@@ -110,4 +110,104 @@ A **Network Adapter** is a hardware component that enables a device to connect t
 | IPv4           | 32-bit address format, older standard                                       |
 | IPv6           | 128-bit address format, modern standard                                     |
 | Network Adapter| Device that enables network connectivity                                    |
+# 🛡️ Cyber Attack Timeline
+
+This document outlines the typical **timeline of a cyber attack**, including the sequential phases used by attackers or penetration testers. Understanding the attack timeline is crucial for identifying, preventing, and responding to security breaches.
+
+---
+
+## ⏱️ Attack Timeline Phases
+
+### 1. 🔍 Reconnaissance
+**Objective:** Gather information about the target.
+
+- Identify domain names, IP addresses, subdomains
+- Use OSINT (Open Source Intelligence) tools like:
+  - `whois`, `nslookup`, `theHarvester`
+- Passive & Active scanning
+
+### 2. 📡 Scanning
+**Objective:** Identify vulnerabilities in the target systems.
+
+- Port scanning (`nmap`)
+- Service enumeration
+- Vulnerability scanning (`nikto`, `OpenVAS`, `Nessus`)
+
+### 3. 🎯 Gaining Access
+**Objective:** Exploit vulnerabilities to enter the system.
+
+- Use tools like `Metasploit`, `SQLmap`, `Hydra`
+- Exploitation methods:
+  - Credential brute force
+  - Code injection (e.g., SQLi, XSS)
+  - Software bugs
+
+### 4. 🐚 Privilege Escalation
+**Objective:** Gain higher access rights in the system.
+
+- Exploit kernel or local vulnerabilities
+- Leverage misconfigurations or weak permissions
+- Tools: `linux-exploit-suggester`, `winPEAS`, `linPEAS`
+
+### 5. 📂 Maintaining Access
+**Objective:** Establish persistent access.
+
+- Create backdoors or cron jobs
+- Modify registry or scheduled tasks (Windows)
+- Install rootkits or RATs (Remote Access Tools)
+
+### 6. 📤 Data Exfiltration / Execution
+**Objective:** Achieve the attack’s purpose.
+
+- Steal sensitive data
+- Execute ransomware or destructive payloads
+- Screenshot, keylogging, database dump
+
+### 7. 🧹 Covering Tracks
+**Objective:** Remove evidence of the attack.
+
+- Clear logs (`bash_history`, Event Viewer)
+- Delete tools and temporary files
+- Use anti-forensics techniques
+
+### 8. 🔁 Post-Exploitation / Pivoting
+**Objective:** Move laterally to other systems.
+
+- Enumerate internal network
+- Crack hashes (e.g., `JohnTheRipper`, `hashcat`)
+- Use compromised machine as a foothold
+
+---
+
+## 🕒 Sample Timeline Table
+
+| Time (HH:MM) | Phase               | Activity                          |
+|--------------|---------------------|-----------------------------------|
+| 09:00        | Reconnaissance       | Gathered domain & IP info         |
+| 09:20        | Scanning             | Ran `nmap` to find open ports     |
+| 09:45        | Gaining Access       | Exploited vulnerable login page   |
+| 10:10        | Privilege Escalation | Exploited kernel vulnerability    |
+| 10:30        | Maintaining Access   | Installed reverse shell           |
+| 10:45        | Data Exfiltration    | Downloaded confidential files     |
+| 11:00        | Covering Tracks      | Deleted logs and shell history    |
+| 11:15        | Post-Exploitation    | Accessed internal file server     |
+
+---
+
+## 🔐 Disclaimer
+
+This timeline is for **educational and ethical use only**. Unauthorized access to computer systems is illegal and unethical. Always have **written permission** before conducting penetration testing.
+
+---
+
+## 📚 Related Tools
+
+- `nmap` – Port scanning
+- `Metasploit` – Exploitation framework
+- `JohnTheRipper` – Password cracking
+- `netcat` – Reverse shell and port communication
+- `Burp Suite` – Web app analysis
+
+
+
 
